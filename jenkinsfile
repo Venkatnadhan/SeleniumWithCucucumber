@@ -1,9 +1,6 @@
 pipeline {
     agent any
    stages {
-        stage('Checkout') {
-            git credentialsId: '76d4d5be-a037-4d47-8cc7-fd190d5645b2', url: 'https://github.com/Venkatnadhan/SeleniumWithCucucumber.git'
-        }
         stage('Build & Test') {
             bat 'mvn verify'    
         }
